@@ -1,10 +1,10 @@
 # Python_problems
 
-For running all apps correctly 
-please install dependency packages:
+### For running all apps correctly 
+### please install dependency packages:
 
 
-how to install install: 
+#### how to install install: 
     
     pip install -r requirements.txt
 
