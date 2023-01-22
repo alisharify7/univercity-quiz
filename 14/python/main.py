@@ -1,33 +1,34 @@
 import sys
 
 
-def get_maqsom(n):
-    result = []
-    for i in range(1, 10000):
-        counter = 0
-        for j in range(1, int(i / 2) + 1):
-            if i % j == 0:
-                counter += 1
-                if counter == n:
-                    result.append(i)
-                if counter > n:
-                    if i in result:
-                        result.remove(i)
-                    
-    return result
-
-
-
 def main():
-    n = input("Enter Number of divisible:  ")
+    n = input("Enter Number of round:  ")
     try:
         n = int(n)
     except ValueError:
         sys.exit("input must be integer ")
 
-    result = get_maqsom(n)
-    for each in result:
-        print(each, end="  ")
+    numbers = []
+    
+    i = 0
+    while True:
+        if i == n:
+            break
+        temp = input(f"Enter Number \33[33m{i+1}\33[0m: ")
+
+        try:
+            temp = float(temp)
+        except ValueError:
+            print("invalid input :(")
+            continue
+        else:
+            numbers.append(temp)
+            i += 1
+    
+
+    print(f"\33[32mmaximum value is {max(numbers)}")
+    print(f"minimum value is {min(numbers)}")
+    print(f"average value is {sum(numbers) / len(numbers)} \33[0m")
 
 if __name__ == '__main__':
     main()

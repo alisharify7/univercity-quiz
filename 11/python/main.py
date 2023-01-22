@@ -3,21 +3,17 @@ import sys
 
 
 def main():
-    n = input("Enter a 30 digit Number:  ")
-    if len(n) != 30:
-        sys.exit("number Must be 30 characters")
-    
-    m = input("Enter a 30 digit Number:  ")
-    if len(m) != 30:
-        sys.exit("number Must be 30 characters")
-    
-    if not m.isdigit() or not n.isdigit:
-        sys.exit("Input must be integer Number")
+    n = input("Enter a binary Number:  ")
+    m = n
+    # convert str to int
+    try:
+        n = int(n, base=2)
+    except ValueError:
+        sys.exit("invalid input")
 
-    # python is dynamic data type so this is not good for solving in python
-    # but in other language like c c# and we should use correct type for variable to
-    # calculate this otherwise it can be overflow
-    print(int(m)+int(n))
+    print(f"\n-{m} in int<10> is {n}")
+    print(f"-{m} in hex<16> is {hex(n)}")
+    print(f"-{m} in oct<8> is {oct(n)}\n")
 
 if __name__ == '__main__':
     main()
