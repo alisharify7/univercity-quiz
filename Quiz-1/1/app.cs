@@ -12,7 +12,7 @@ namespace app
         {
 
             // s = > sum 
-            // c = > couter
+            // c = > counter
             // avrage formula => sum / count
             int s = 0, c = 0;
             for (int i = 0; i < 100; i++)
