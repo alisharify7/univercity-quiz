@@ -17,11 +17,17 @@ def main():
     except ValueError:
         sys.exit("Input Must be Integer")
 
-    # iterate from 1 to n (Number that User enter)
-    for i in range(1, n+1):
-        # check value of factorial is equal to n or not
-        if factorial(i) == n:
-            print(f"Factorial of {i} is {n}")
+
+    res = 1
+    for i in range(1,n+1):
+        res *= i
+        if res > n:
+            sys.exit("Not Found")
+
+        if res == n:
+            sys.exit(f"{i} != {res}")
+
+
 
 if __name__ == '__main__':
     main()
