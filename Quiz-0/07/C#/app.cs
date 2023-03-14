@@ -10,7 +10,7 @@ namespace app
     {
         static int fibunacci(int n)
         {
-            // this function return a number fibunacci number
+            // this function return a number fibunacci value
             int a = 0, b = 1, c = 1;
 
             for (int i = 0; i < n; i++)
